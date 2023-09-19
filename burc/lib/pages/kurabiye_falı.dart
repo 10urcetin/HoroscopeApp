@@ -6,6 +6,12 @@ class CookieFortuneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+        //Icon(Icons.arrow_back_ios_new),
+      ]),
       backgroundColor: Colors.deepPurple[200],
       
       body: Center(

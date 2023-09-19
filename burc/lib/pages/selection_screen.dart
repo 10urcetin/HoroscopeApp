@@ -2,6 +2,7 @@
 
 import 'package:burc/pages/burc_listesi.dart';
 import 'package:burc/pages/ruya_yorum.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'daily_tarot.dart';
@@ -14,13 +15,18 @@ class SelectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+
+      ),
   backgroundColor: Colors.deepPurple[200],
  
   body: Column(
     mainAxisAlignment: MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
-      SizedBox(height: 90),
+      SizedBox(height: 50),
       Text(
         "Bu gün ne yapmak istersin?",
         style: TextStyle(

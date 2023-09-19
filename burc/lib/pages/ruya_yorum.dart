@@ -13,25 +13,24 @@ class _DreamInterpretationScreenState
   String dreamInterpretation = ""; // Rüya yorumu burada tutulacak
   TextEditingController _searchController = TextEditingController();
 
- /*  Future<void> fetchDreamInterpretation(String dream) async {
-    final response = await http.get(
-      Uri.parse('https://4d-dream-dictionary.p.rapidapi.com/get_dream_number/4/en/$dream'),
-      headers: {
-        'X-RapidAPI-Key':
-            '2aceb33c23msh0502cf73654a7adp1fa5aejsn27d0d8fbc30f',
-      },
-    );
+  /* Future<void> fetchDreamInterpretation(String dream) async {
+  final response = await http.get(
+    Uri.parse('https://4d-dream-dictionary.p.rapidapi.com/get_dream_number/$dream/en/'),
+    headers: {
+      'X-RapidAPI-Key':
+          '2aceb33c23msh0502cf73654a7adp1fa5aejsn27d0d8fbc30f',
+    },
+  );
 
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      setState(() {
-        dreamInterpretation = data['dream_interpretation'];
-      });
-    } else {
-      throw Exception('Failed to load dream interpretation');
-    }
-  } */
-
+  if (response.statusCode == 200) {
+    final data = json.decode(response.body);
+    setState(() {
+      dreamInterpretation = data['dream_interpretation'];
+    });
+  } else {
+    throw Exception('Failed to load dream interpretation');
+  }
+} */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +48,7 @@ class _DreamInterpretationScreenState
                 labelText: 'Rüya Kelimesi Girin',
                 suffixIcon: IconButton(
                   onPressed: () {
-                  //  fetchDreamInterpretation(_searchController.text);
+                    // fetchDreamInterpretation(_searchController.text);
                   },
                   icon: Icon(Icons.search),
                 ),
@@ -58,7 +57,7 @@ class _DreamInterpretationScreenState
           ),
           ElevatedButton(
             onPressed: () {
-             // fetchDreamInterpretation(_searchController.text);
+              // fetchDreamInterpretation(_searchController.text);
             },
             child: Text('Rüya Yorumu Getir'),
           ),
